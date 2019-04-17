@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css?family=Anton');
+
+#logo {
+    width: 70px;
+    height: 70px;
+    top: 15px;
+    position: relative;
+}
+
+h4 {
+    font-family: 'Anton', cursive;
+    position: relative;
+    top: 10px;
+}
+
+h5 {
+    font-family: 'Anton', cursive;
+}
+
+@media only screen and (max-width: 600px) {
+    div.example {
+      display: none;
+    }
+  }
+
+nav {
+    height: 100px;
+}
+
+.menu {
+    position: relative;
+    top: 20px;
+}
