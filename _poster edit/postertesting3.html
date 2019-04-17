@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Create Your Own Magic Poster</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+  <link rel="stylesheet" href="styles/postertest2.css"></link>
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <script>
+  $( function() {
+    $( "#draggable2" ).draggable({ snap: ".ui-widget-header" });
+    $( "#draggable3" ).draggable({ snap: ".ui-widget-header", snapMode: "both" });
+  } );
+  </script>
+</head>
+<body>
+  <nav class="indigo darken-3" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo"><img class="responsive-img" id="logo" src="images/logo.png">Super 8</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#"><h4>TEAM</h4></a></li>
+        <li><a href="#"><h4>POSTER</h4></a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="sidenav grey lighten-3">
+          <li><a href="#"><h5>TEAM</h5></a></li>
+          <li><a href="#"><h5>POSTER</h5></a></li>
+      </ul>
+      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="large material-icons menu">menu</i></a>
+    </div>
+  </nav>
+
+<div id="snaptarget" class="ui-widget-header">
+  <!--<p>I'm a snap target</p>-->
+      <img  id="snaptarget" class="ui-widget-header" width="1080px" height="576px" src="images/magiccourt4.PNG">
+</div>
+
+<br style="clear:both">
+
+<div id="draggable2" class="draggable ui-widget-content">
+  <p>I only snap to the big box</p>
+</div>
+
+<div id="draggable3" class="draggable ui-widget-content">
+  <p>I only snap to the big box2</p>
+</div>
+
+<div id="draggable3" class="draggable ui-widget-content">
+    <img id="draggable2" class="draggable ui-widget-content" width="100px" height="100px" src="images/ag.png">
+</div>
+
+<div id="draggable2" class="draggable ui-widget-content">
+    <img id="draggable2" class="draggable ui-widget-content" width="100px" height="100px" src="images/djaugustinblue.png">
+</div>
+
+<div id="draggable2" class="draggable ui-widget-content">
+    <img id="draggable2" class="draggable ui-widget-content" width="100px" height="100px" src="images/evanfornierblue.png">
+</div>
+
+<div id="draggable2" class="draggable ui-widget-content">
+    <img id="draggable2" class="draggable ui-widget-content" width="100px" height="100px" src="images/evanfornierblue.png">
+</div>
+
+<div id="draggable2" class="draggable ui-widget-content">
+    <img id="draggable2" class="draggable ui-widget-content" width="100px" height="100px" src="images/logo.png">
+</div>
+
+<!--<div>
+<footer class="page-footer indigo darken-3">
+  <div class="footer-copyright">
+    <div class="container">
+    Made by <a class="orange-text text-lighten-3" href=#>Team Name</a>
+    </div>
+  </div>
+</footer>
+</div>-->
+
+</body>
+
+<div>
+<footer class="page-footer indigo darken-3">
+  <div class="footer-copyright">
+    <div class="container">
+    Made by <a class="orange-text text-lighten-3" href=#>Team Name</a>
+    </div>
+  </div>
+</footer>
+</div>
+</html>
