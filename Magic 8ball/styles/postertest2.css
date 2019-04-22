@@ -8,8 +8,7 @@
   margin: 0; }
 
 #snaptarget {
-  height: 840px;
-  width: 1593px;
-  background-image: url("https://vignette.wikia.nocookie.net/nba/images/6/6b/Orlando_Magic_court_logo.png/revision/latest?cb=20140727012254");
-  background-repeat: no-repeat;
+  height: 576px;
+  width: 1080px;
+  background-color: white;
 }
