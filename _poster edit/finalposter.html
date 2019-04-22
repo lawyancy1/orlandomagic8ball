@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Create Your Own Magic Poster</title>
+  <!--Import jQuery UI CSS from Google-->
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+<!--Import CSS styling for the Poster-->
+  <link rel="stylesheet" href="styles/postertest2.css"></link>
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<!--Import -->
+  <link rel="stylesheet" href="css/style.css">
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <script>
+  $( function() {
+    $( "#draggable2" ).draggable({ snap: ".ui-widget-header" });
+    $( "#draggable3" ).draggable({ snap: ".ui-widget-header", snapMode: "both" });
+    $( "#draggable4" ).draggable({ snap: ".ui-widget-header" });
+    $( "#draggable5" ).draggable({ snap: ".ui-widget-header" });
+    $( "#draggable6" ).draggable({ snap: ".ui-widget-header" });
+    $( "#draggable7" ).draggable({ snap: ".ui-widget-header" });
+    $( "#draggable8" ).draggable({ snap: ".ui-widget-header" });
+  } );
+  </script>
+  <!--Function to print DIV.-->
+  <script>
+  function printDiv(snaptarget) {
+       var printContents = document.getElementById(snaptarget).innerHTML;
+       var originalContents = document.body.innerHTML;
+
+       document.body.innerHTML = printContents;
+
+       window.print();
+
+       document.body.innerHTML = originalContents;
+  };
+  </script>
+</head>
+<body>
+  <nav class="indigo darken-3" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo"><img class="responsive-img" id="logo" src="images/logo.png">Super 8</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#"><h4>TEAM</h4></a></li>
+        <li><a href="#"><h4>POSTER</h4></a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="sidenav grey lighten-3">
+          <li><a href="#"><h5>TEAM</h5></a></li>
+          <li><a href="#"><h5>POSTER</h5></a></li>
+      </ul>
+      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="large material-icons menu">menu</i></a>
+    </div>
+  </nav>
+
+<div id="printsection">
+<h2 align="center">Magic Home Court Advantage!</h2>
+<div id="snaptarget" class="ui-widget-header">
+  <!--<p>I'm a snap target</p>-->
+
+      <img  id="snaptargetphoto" class="ui-widget-header" width="1080px" height="576px" src="images/magiccourt4.PNG">
+</div>
+
+<br style="clear:both">
+
+<!--<p>DIV holding all of the images that are supposed to be draggable.</p>-->
+<div id="image-bank">
+    <img id="draggable4" class="draggable ui-widget-content" width="100px" height="100px" src="images/ag.png">
+    <img id="draggable5" class="draggable ui-widget-content" width="100px" height="100px" src="images/djaugustinblue.png">
+    <img id="draggable6" class="draggable ui-widget-content" width="100px" height="100px" src="images/evanfornierblue.png">
+    <img id="draggable7" class="draggable ui-widget-content" width="100px" height="100px" src="images/evanfornierblue.png">
+    <img id="draggable8" class="draggable ui-widget-content" width="100px" height="100px" src="images/logo.png">
+</div>
+</div>
+<!--Button to print-->
+<input type="button" onclick="printDiv('printsection')" value="Print Your Poster!" />
+
+<br></br>
+<br></br>
+<!--Share Button Icons-->
+<div id="social-icons">
+  <h5>Share Your Poster </h5>
+  <a href="https://mail.google.com/"><img id="socialicon1" width="25px" height="25px" src="socialicons/email.png" href="https://mail.google.com/"></a>
+  <a href="http://www.facebook.com/"><img id="socialicon2" width="25px" height="25px" src="socialicons/facebook.png" href="http://www.facebook.com/"></a>
+  <a href="http://www.instagram.com/"><img id="socialicon4" width="25px" height="25px" src="socialicons/instagram.png" href="http://www.instagram.com/"></a>
+  <a href="http://www.tumblr.com/"><img id="socialicon5" width="25px" height="25px" src="socialicons/tumblr.png" href="http://www.tumblr.com/"></a>
+  <a href="http://www.twitter.com/"><img id="socialicon6" width="25px" height="25px" src="socialicons/twitter.png" href="http://www.twitter.com/"></a>
+</div>
+
+<br></br>
+
+</body>
+
+<div>
+<footer class="page-footer indigo darken-3">
+  <div class="footer-copyright">
+    <div class="container">
+    Made by <a class="orange-text text-lighten-3" href=#>Team Name</a>
+    </div>
+  </div>
+</footer>
+</div>
+</html>
