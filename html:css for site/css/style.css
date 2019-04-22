@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css?family=Anton');
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+
+#logo {
+    width: 300px;
+    height: 300px;
+}
+h1 {
+    font-family: 'Lobster', cursive;
+    position: relative;
+    top: -27px;
+}
+
+h4 {
+    font-family: 'Anton', cursive;
+    position: relative;
+    top: 10px;
+}
+
+h5 {
+    font-family: 'Anton', cursive;
+}
+
+@media only screen and (max-width: 600px) {
+    div.example {
+      display: none;
+    }
+  }
+
+nav {
+    height: 100px;
+}
+
+.menu {
+    position: relative;
+    top: 20px;
+}
+
+/*Video*/
+
+#container {
+    overflow: hidden;
+    height: 600px;
+    background: #edeae8;
+    position: relative;
+  }
+  
+  video {
+    position: absolute;
+    
+    /* Vertical and Horizontal center*/
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+ .contain {
+    position: relative;
+    text-align: center;
+    color: white;
+    display: block;
+  }
+
+    /* Centered text */
+    .centered {
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
