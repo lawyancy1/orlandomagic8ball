@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+  <link rel="stylesheet" href="css/style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>		
+	<script>
+		$(function(){			 
+			$("#answer").hide();
+
+			var getPrediction = function(){
+				$("#answer").hide();
+				$("#logo").attr("src", "images/logo.png");
+				$("#answer").text("answer");
+				$("#answer").fadeIn(3000);
+				$("#logo").attr("src", "images/logoAnswer.png");
+			};
+			  
+			$("#getpred").on('click', getPrediction);
+			$("#getpred").on('click', function() {
+				$("#answer").load("get_prediction.php")
+			});	
+			
+			function predictWin(){
+				var name = prompt("Enter your name: ");
+				if (name != null && reason != "") {
+					$.post("insert_prediction.php", 
+					{ 
+						name: name, 
+						prediction: win,
+					});
+				}
+			}			
+
+			function predictLose(){
+				var name = prompt("Enter your name: ");
+				if (name != null && reason != "") {
+					$.post("insert_prediction.php", 
+					{ 
+						name: name, 
+						prediction: lose,
+					});
+				}
+			}
+
+			$("#winpred").on('click', predictWin);
+			$("#losepred").on('click', predictLose);
+		});
+	</script>
+</head>
+
+<body>
+
+  <nav class="indigo darken-3" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo"><h1>Super 8</h1></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="team.html"><h4>TEAM</h4></a></li>
+        <li><a href="poster.html"><h4>POSTER CREATOR</h4></a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="sidenav grey lighten-3">
+          <li><a href="team.html"><h5>TEAM</h5></a></li>
+          <li><a href="poster.html"><h5>POSTER CREATOR</h5></a></li>
+      </ul>
+      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="large material-icons menu">menu</i></a>
+    </div>   
+  </nav>
+
+  <div class="contain" id="colibri">
+    <div id="container">
+      <video autoplay muted loop>
+        <source src="images/basketball.mp4" type="video/mp4">
+        </video>
+      </div>      
+	<div class="centered">
+			<div class="ball">
+				<img id="logo" src="images/logo.png">
+				<p id="answer" class="answer"></p>
+			</div>
+
+			<button id="getpred">get prediction</button>
+        <h4>Who will be the winner?</h4>
+      </div>
+    </div>
+  
+	<div class="section">
+    </div>
+	<div class="row grey lighten-3">
+		<div class="container">
+			<div class="section">
+				<h4 class="center-align">Make your prediction</h4>
+			</div>
+			<div class="col s6">
+				<div class="card">
+					<div class="card-image center-align">
+						<img src="images/magic_official_logo.jpg">
+					</div>
+					<div class="card-content">
+						<span class="card-title center-align">Orlando Magic</span>
+						<p class="center-align">X Wins</p>
+						<p class="center-align">X Losses</p>
+						<form class="container" method="post">
+							<div class="input-field center-align">
+								<button id="winpred">
+									predict win
+								</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>			
+			<div class="col s6">
+				<div class="card">
+					<div class="card-image center-align">
+						<img src="images/raptors_official_logo.jpg">		
+					</div>
+					<div class="card-content valign-">
+						<span class="card-title center-align">Toronto Raptors</span>
+						<p class="center-align">X Wins</p>
+						<p class="center-align">X Losses</p>
+						<form class="container" method="post">
+							<div class="input-field center-align">
+								<button id="losepred">
+									predict win
+								</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="section">
+				
+			</div>
+		</div>
+    </div>
+
+  <footer class="page-footer indigo darken-3">
+    <div class="footer-copyright">
+      <div class="container">
+      Made by <a class="orange-text text-lighten-3" href=#>Team Name</a>
+      </div>
+    </div>
+  </footer>
+
+
+
+  <!--Jquery-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!--JavaScript at end of body for optimized loading-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+   <!--video-->
+   <script src="video.js"></script>
+
+  <script> 
+   M.AutoInit();
+    </script>
+</body>
+
+</html>
+
+  
